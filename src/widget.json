@@ -1,0 +1,45 @@
+{
+  "$schema": "http://test.meepo.com.cn/schema/schema.json",
+  "type": "object",
+  "definitions": {
+    "Widget": {
+      "type": "object",
+      "title": "小部件",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "inputs": {
+          "type": "object",
+          "$ref": "#"
+        },
+        "outputs": {
+          "type": "object",
+          "$ref": "#"
+        },
+        "class": {
+          "type": "array",
+          "title": "样式类",
+          "$ref": "#"
+        },
+        "contents": {
+          "type": "object",
+          "$ref": "#"
+        },
+        "isLazy": {
+          "type": "boolean"
+        },
+        "script": {
+          "type": "string"
+        },
+        "selector": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name", "inputs", "isLazy", "script", "selector"
+      ]
+    }
+  },
+  "$ref": "#/definitions/Widget"
+}

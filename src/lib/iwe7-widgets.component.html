@@ -1,0 +1,11 @@
+<ng-container *ngIf="!isObservable">
+  <ng-container *ngFor="let item of _schema|iwe7Widget">
+    <ng-container [widget]="item"></ng-container>
+  </ng-container>
+</ng-container>
+
+<ng-container *ngIf="isObservable">
+  <ng-container *ngFor="let item of _schema|async|iwe7Widget">
+    <ng-container [widget]="item"></ng-container>
+  </ng-container>
+</ng-container>
